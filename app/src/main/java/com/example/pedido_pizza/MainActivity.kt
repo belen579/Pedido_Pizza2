@@ -189,6 +189,10 @@ class MainActivity : AppCompatActivity() {
                    var toast = Toast.makeText(this, "Pedido cancelado", Toast.LENGTH_SHORT)
                    toast.show()
                    dialog.dismiss()
+
+                   val intent = Intent(this, MainActivityportada::class.java);
+
+                   startActivity(intent)
                }
 
 
