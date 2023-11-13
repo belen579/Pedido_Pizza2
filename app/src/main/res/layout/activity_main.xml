@@ -70,7 +70,7 @@
         android:textColor="@color/white"></CheckBox>
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/pepino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pepino "
