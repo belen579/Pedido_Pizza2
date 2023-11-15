@@ -1,9 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Pedido_Pizza" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Pedido_Pizza" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item>
+        <-->
     </style>
 
     <style name="Theme.Pedido_Pizza" parent="Base.Theme.Pedido_Pizza" />
+    <style name="botones" parent="TextAppearance.AppCompat">
+        <item name="backgroundTint">@color/red</item>
+    </style>
+    <style name="botonverde" parent="TextAppearance.AppCompat">
+        <item name= "backgroundTint">@color/green</item>
+    </style>
+    <style name="botonportada" parent="TextAppearance.AppCompat">
+        <item name= "backgroundTint">@color/Yellow</item>
+    </style>
+
+
 </resources>

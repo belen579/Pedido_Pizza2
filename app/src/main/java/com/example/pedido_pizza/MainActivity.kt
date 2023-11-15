@@ -138,13 +138,6 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-
-
-
-
-
-
-
         }
     }
 

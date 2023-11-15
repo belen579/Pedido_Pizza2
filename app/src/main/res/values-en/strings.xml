@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Order_Pizza</string>
+    <string name="app_name">Order Pizza</string>
     <string name="pedido">Order Pizzeria Call 123X</string>
     <string name="champiñones">Mushrooms</string>
     <string name="pepino">Cucumber</string>

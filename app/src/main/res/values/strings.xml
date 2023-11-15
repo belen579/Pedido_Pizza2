@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Pedido_Pizza</string>
+    <string name="app_name" translatable="false">Pedido Pizza</string>
     <string name="pedido" translatable="false">Pedido Pizzeria Call123X</string>
     <string name= "pepino" translatable="false">Pepino</string>
     <string name= "extra" translatable="false">Extre Mozarella</string>
