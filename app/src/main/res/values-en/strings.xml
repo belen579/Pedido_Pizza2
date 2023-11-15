@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Order_Pizza</string>
+    <string name="pedido">Order Pizzeria Call 123X</string>
+    <string name="champiñones">Mushrooms</string>
+    <string name="pepino">Cucumber</string>
+    <string name="extra">Estra Mozarella</string>
+    <string name="atun">Tuna</string>
+    <string name="piña">Pineapple</string>
+    <string name="aceitunas">Olives</string>
+    <string name="peticion">Add the ingredients you want on the pizza</string>
+    <string name="recogida">Store Pickup</string>
+
+    <string name="reparto">Delivery</string>
+    <string name="validar">Validate</string>
+    <string name="limpiar">Clean</string>
+    <string name="titulo">Order Pizzeria Call 123X</string>
+    <string name="Confirmacion" >Confirm your order </string>
+    <string name="Validado" >Order validate</string>
+    <string name="Desea_validar" >¿You want to validate the order?</string>
+    <string name="si" >Yes</string>
+    <string name="no" >No</string>
+    <string name="pedido_cancelado" translatable= "false">Canceled Order</string>
+
+</resources>

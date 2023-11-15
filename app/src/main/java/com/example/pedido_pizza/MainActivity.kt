@@ -164,13 +164,13 @@ class MainActivity : AppCompatActivity() {
 
              val alert = AlertDialog.Builder(this)
 
-             alert.setTitle("Confirmación Pedido")
-             alert.setMessage("¿Desea validar el pedido?")
+             alert.setTitle(R.string.Confirmacion)
+             alert.setMessage(R.string.Desea_validar)
 
 
-             alert.setPositiveButton("Si"){
+             alert.setPositiveButton(R.string.si){
                      dialog, which->
-                 var toast = Toast.makeText(this, "Pedido validado", Toast.LENGTH_SHORT)
+                 var toast = Toast.makeText(this, R.string.Validado, Toast.LENGTH_SHORT)
                  toast.show()
 
                  val ticketactivity2 =  binding.ticket.text;
@@ -184,9 +184,9 @@ class MainActivity : AppCompatActivity() {
                      dialog.dismiss()
                  }
 
-               alert.setNegativeButton("No"){
+               alert.setNegativeButton(R.string.no){
                    dialog, which->
-                   var toast = Toast.makeText(this, "Pedido cancelado", Toast.LENGTH_SHORT)
+                   var toast = Toast.makeText(this, R.string.pedido_cancelado, Toast.LENGTH_SHORT)
                    toast.show()
                    dialog.dismiss()
 

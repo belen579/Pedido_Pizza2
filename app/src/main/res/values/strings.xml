@@ -1,3 +1,22 @@
 <resources>
-    <string name="app_name">Pedido_Pizza</string>
+    <string name="app_name" translatable="false">Pedido_Pizza</string>
+    <string name="pedido" translatable="false">Pedido Pizzeria Call123X</string>
+    <string name= "pepino" translatable="false">Pepino</string>
+    <string name= "extra" translatable="false">Extre Mozarella</string>
+    <string name="atun" translatable="false">Atun</string>
+    <string name="piña" translatable="false">Piña</string>
+    <string name="aceitunas" translatable="false">Aceitunas</string>
+    <string name="peticion" translatable="false">Introduzca los ingredientes que quiere en la pizza</string>
+    <string name="recogida" translatable="false">Recogida en tienda</string>
+    <string name="reparto" translatable="false">Reparto a domicilio</string>
+    <string name= "validar" translatable="false">Validar</string>
+    <string name="limpiar" translatable="false">Limpiar</string>
+    <string name="titulo" translatable="false">Pedido Pizzeria Call123X</string>
+    <string name="champiñones" translatable="false">champiñones</string>
+    <string name="Confirmacion" translatable="false">Confirmacion de pedido</string>
+    <string name="Validado" translatable="false">Pedido Validado</string>
+    <string name="Desea_validar" translatable= "false">¿Desea validar el pedido?</string>
+    <string name="si" translatable= "false">Si</string>
+    <string name="no" translatable= "false">No</string>
+    <string name="pedido_cancelado" translatable= "false">Pedido Cancelado</string>
 </resources>
