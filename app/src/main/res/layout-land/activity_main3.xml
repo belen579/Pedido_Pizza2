@@ -16,12 +16,13 @@
 
     <TextView
         android:id="@+id/ticketfinal"
-        android:layout_width="322dp"
-        android:layout_height="308dp"
+        android:layout_width="224dp"
+        android:layout_height="133dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="200dp"
         android:layout_marginBottom="150dp"
+        android:text="Pedido"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
