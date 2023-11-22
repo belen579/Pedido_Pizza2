@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo2land" />
+
+    <TextView
+        android:id="@+id/pedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="250dp"
+        android:text="@string/titulo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06999999"
+        android:textColor="@color/white"/>
+
+
+    <TextView
+        android:id="@+id/textnum1"
+        android:layout_width="700dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/peticion"
+
+        app:layout_constraintBottom_toTopOf="@+id/champiñones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pedido"
+        tools:ignore="MissingConstraints"
+        android:textColor="@color/white"/>
+
+    <CheckBox
+        android:id="@+id/champiñones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="@string/champiñones"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textnum1"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/extra"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/champiñones"
+        android:textColor="@color/white"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/pepino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pepino"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extra"
+        android:textColor="@color/white"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/piña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/piña"
+        android:layout_marginStart="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textnum1"
+        android:textColor="@color/white"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/aceitunas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aceitunas"
+        android:layout_marginStart="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/piña"
+        android:textColor="@color/white"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/atun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/atun"
+        android:layout_marginStart="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aceitunas"
+        android:textColor="@color/white"></CheckBox>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="366dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="350dp"
+
+        android:layout_marginEnd="5dp"
+
+
+        android:layout_marginBottom="341dp"
+
+        android:orientation="horizontal"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/atun"
+        tools:ignore="MissingConstraints">
+
+
+        <RadioButton
+            android:id="@+id/reparto"
+            style="@style/botones"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="@string/reparto"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eleccion"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/recogida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/recogida"
+            android:textColor="@color/white"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eleccion"
+            tools:ignore="MissingConstraints"></RadioButton>
+
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/boton"
+        style="@style/botonverde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/validar"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"></Button>
+
+
+    <Button
+        android:id="@+id/limpiar"
+        style="@style/botones"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/limpiar"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:ignore="MissingConstraints"></Button>
+
+    <TextView
+        android:id="@+id/ticket"
+        android:layout_width="51dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="92dp"
+
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/boton"
+        tools:ignore="MissingConstraints">
+
+
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
