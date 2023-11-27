@@ -21,5 +21,10 @@
     <string name="si" >Yes</string>
     <string name="no" >No</string>
     <string name="pedido_cancelado" translatable= "false">Canceled Order</string>
+    <string name="Acerca_de" translatable= "false">About</string>
+    <string name="Inicio_app" translatable= "false">Start App</string>
+    <string name="Enlace_Pizzeria" translatable= "false">Show the Website</string>
+    <string name= "pide_pizza" translatable= "false">Order your Pizza</string>
+    <string name = "share_action" translatable= "false">Share</string>
 
 </resources>

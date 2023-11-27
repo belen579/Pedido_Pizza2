@@ -19,4 +19,9 @@
     <string name="si" translatable= "false">Si</string>
     <string name="no" translatable= "false">No</string>
     <string name="pedido_cancelado" translatable= "false">Pedido Cancelado</string>
+    <string name="Acerca_de" translatable= "false">Acerca de</string>
+    <string name="Inicio_app" translatable= "false">Inicio App</string>
+    <string name="Enlace_Pizzeria" translatable= "false">Enlace a Web</string>
+    <string name= "pide_pizza" translatable= "false">Pide tu Pizza</string>
+   <string name = "share_action" translatable= "false">Compartir</string>
 </resources>
