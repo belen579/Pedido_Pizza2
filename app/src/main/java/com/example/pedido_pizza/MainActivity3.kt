@@ -37,14 +37,30 @@ class MainActivity3 : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(item.itemId==R.id.share_action) {
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "Pizzeria Pedido")
+                type = "Text/plain"
+            }
+            try {
+                startActivity(sendIntent)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(this, "No se puede", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         if (item.itemId == R.id.Inicio_app) {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
 
 
         }
+
         if (item.itemId == R.id.acerca) {
-            Toast.makeText(this, "Realizado por Belen Bastos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Realizado por Belén Bastos", Toast.LENGTH_SHORT).show()
+
         }
 
         if (item.itemId == R.id.Enlace_Pizzeria) {
@@ -52,8 +68,15 @@ class MainActivity3 : AppCompatActivity() {
 
 
         }
+
+
+
+
+
         return true
     }
+
+
 
     fun openWebPage(context: Context, url: String?) {
         try {

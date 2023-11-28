@@ -37,115 +37,126 @@ class MainActivity : AppCompatActivity() {
 
 
             if (binding.champiOnes.isChecked) {
-                selectedIngredients.add(ingredientes.champiñones.toString())
+                selectedIngredients.add(getString(R.string.champiñones))
 
 
             } else {
-                selectedIngredients.remove(ingredientes.champiñones.toString())
+                selectedIngredients.remove(getString(R.string.champiñones))
             }
 
             if (binding.atun.isChecked) {
-                selectedIngredients.add(ingredientes.atun.toString())
+                selectedIngredients.add(getString(R.string.atun))
 
             } else {
-                selectedIngredients.remove(ingredientes.atun.toString())
+                selectedIngredients.remove(getString(R.string.atun))
             }
 
             if (binding.aceitunas.isChecked) {
-                selectedIngredients.add(ingredientes.aceitunas.toString())
+                selectedIngredients.add(getString(R.string.aceitunas))
 
 
             } else {
-                selectedIngredients.remove(ingredientes.aceitunas.toString())
+                selectedIngredients.remove(getString(R.string.aceitunas))
             }
             if (binding.piA.isChecked) {
-                selectedIngredients.add(ingredientes.piña.toString())
+                selectedIngredients.add(getString(R.string.piña))
 
             } else {
-                selectedIngredients.remove(ingredientes.piña.toString())
+                selectedIngredients.remove(getString(R.string.piña))
             }
 
             if (binding.extra.isChecked) {
-                selectedIngredients.add(ingredientes.mozarella.toString())
+                selectedIngredients.add(getString(R.string.extra))
 
             } else {
-                selectedIngredients.remove(ingredientes.mozarella.toString())
+                selectedIngredients.remove(getString(R.string.extra))
             }
 
             if (binding.pepino.isChecked) {
-                selectedIngredients.add(ingredientes.pepino.toString())
+                selectedIngredients.add(getString(R.string.pepino))
 
             } else {
-                selectedIngredients.remove(ingredientes.pepino.toString())
+                selectedIngredients.remove(getString(R.string.pepino))
             }
 
 
 
 
             if (selectedIngredients.isNotEmpty()) {
+                val ingredientes = getString(R.string.Ingredientes)
+                println(ingredientes)
                 ticketingredientes =
-                    "Ticket de pedido:\nIngredientes: ${selectedIngredients.joinToString(", ")}"
+                    "Ticket :\n $ingredientes : ${selectedIngredients.joinToString(", ")}"
                 binding.ticket.text = ticketingredientes
 
 
             } else {
                 binding.ticket.text = "Ningún ingrediente seleccionado."
-               // toast= Toast.makeText(this, "No ha marcado ningún ingrediente", Toast.LENGTH_SHORT)
+                // toast= Toast.makeText(this, "No ha marcado ningún ingrediente", Toast.LENGTH_SHORT)
             }
 
 
             if (binding.reparto.isChecked) {
 
+                val seleccion = getString(R.string.seleccion)
+                val domicilio = getString(R.string.domicilio)
 
                 binding.ticket.text =
-                         ticketingredientes + " \n Ha seleccionado: "+ " \n Reparto a domicilio"
+                    ticketingredientes + " \n $seleccion " + " \n $domicilio"
                 showalert()
-            } else if( !binding.reparto.isChecked && !binding.recogida.isChecked) {
+            } else if (!binding.reparto.isChecked && !binding.recogida.isChecked) {
                 binding.ticket.setTextColor(Color.WHITE)
-                toast = Toast.makeText(this, "No ha marcado ningúna opción de recogida", Toast.LENGTH_SHORT)
+                toast = Toast.makeText(
+                    this,
+                    "No ha marcado ningúna opción de recogida",
+                    Toast.LENGTH_SHORT
+                )
                 toast?.show()
 
-                }
+            }
 
-            if(binding.recogida.isChecked){
+            if (binding.recogida.isChecked) {
+                val seleccion = getString(R.string.seleccion)
+                val tienda = getString(R.string.tienda)
                 binding.ticket.setTextColor(Color.BLACK)
-                binding.ticket.text=
-                        ticketingredientes + "\n Ha seleccionado:"+"\n Recogida en tienda"
+                binding.ticket.text =
+                    ticketingredientes + "\n $seleccion" + "\n $tienda"
 
                 showalert()
 
-                }else if( !binding.reparto.isChecked && !binding.recogida.isChecked) {
+            } else if (!binding.reparto.isChecked && !binding.recogida.isChecked) {
                 binding.ticket.setTextColor(Color.WHITE)
-                    toast =  Toast.makeText(this, "No ha marcado ningúna opción de recogida", Toast.LENGTH_SHORT)
+                toast = Toast.makeText(
+                    this,
+                    "No ha marcado ningúna opción de recogida",
+                    Toast.LENGTH_SHORT
+                )
 
                 toast?.show()
             }
+        }
 
 
+        binding.limpiar.setOnClickListener() {
+            binding.champiOnes.isChecked = false
+            binding.atun.isChecked = false
+            binding.aceitunas.isChecked = false
+            binding.extra.isChecked = false
+            binding.pepino.isChecked = false
+            binding.piA.isChecked = false
+            binding.reparto.isChecked = false
+            binding.recogida.isChecked = false
 
-
-
-
-
-            binding.limpiar.setOnClickListener() {
-                binding.champiOnes.isChecked = false
-                binding.atun.isChecked = false
-                binding.aceitunas.isChecked = false
-                binding.extra.isChecked = false
-                binding.pepino.isChecked = false
-                binding.piA.isChecked = false
-                binding.reparto.isChecked= false
-                binding.recogida.isChecked= false
-
-                binding.ticket.text = ""
-                selectedIngredients.clear()
-                toast?.cancel()
-
-            }
-
+            binding.ticket.text = ""
+            selectedIngredients.clear()
+            toast?.cancel()
 
         }
+
+
     }
+
+
 
         enum class ingredientes {
             champiñones,
@@ -211,14 +222,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(item.itemId==R.id.share_action) {
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "Pizzeria Pedido")
+                type = "Text/plain"
+            }
+            try {
+                startActivity(sendIntent)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(this, "No se puede", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         if (item.itemId == R.id.Inicio_app) {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
 
 
         }
+
         if (item.itemId == R.id.acerca) {
             Toast.makeText(this, "Realizado por Belén Bastos", Toast.LENGTH_SHORT).show()
+
         }
 
         if (item.itemId == R.id.Enlace_Pizzeria) {
@@ -226,6 +253,11 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
+
+
+
+
         return true
     }
 

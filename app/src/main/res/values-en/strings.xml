@@ -26,5 +26,9 @@
     <string name="Enlace_Pizzeria" translatable= "false">Show the Website</string>
     <string name= "pide_pizza" translatable= "false">Order your Pizza</string>
     <string name = "share_action" translatable= "false">Share</string>
+    <string name = "Ingredientes" translatable= "false">Ingredients</string>
+    <string name = "seleccion" translatable= "false">Has Selected :</string>
+    <string name = "domicilio" translatable= "false">Delivery</string>
+    <string name = "tienda" translatable= "false">Picked up at the store</string>
 
 </resources>

@@ -24,4 +24,10 @@
     <string name="Enlace_Pizzeria" translatable= "false">Enlace a Web</string>
     <string name= "pide_pizza" translatable= "false">Pide tu Pizza</string>
    <string name = "share_action" translatable= "false">Compartir</string>
+    <string name = "ticket_pedido" translatable= "false">Ticket de pedido</string>
+    <string name = "Ingredientes" translatable= "false">Ingredientes</string>
+    <string name = "seleccion" translatable= "false">Ha Seleccionado :</string>
+    <string name = "domicilio" translatable= "false">Reparto a domicilio</string>
+    <string name = "tienda" translatable= "false">Recogida en tienda</string>
+
 </resources>
