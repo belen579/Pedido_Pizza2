@@ -24,14 +24,18 @@ import com.example.pedido_pizza.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    val selectedIngredients = mutableListOf<String>()
+
+    var toast: Toast? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val selectedIngredients = mutableListOf<String>()
+
         var ticketingredientes = ""
-        var toast: Toast? = null
+
 
         binding.boton.setOnClickListener() {
 
@@ -136,25 +140,33 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
         binding.limpiar.setOnClickListener() {
-            binding.champiOnes.isChecked = false
-            binding.atun.isChecked = false
-            binding.aceitunas.isChecked = false
-            binding.extra.isChecked = false
-            binding.pepino.isChecked = false
-            binding.piA.isChecked = false
-            binding.reparto.isChecked = false
-            binding.recogida.isChecked = false
 
-            binding.ticket.text = ""
-            selectedIngredients.clear()
-            toast?.cancel()
+            limpiar()
+
 
         }
-
-
     }
+
+
+    fun limpiar() {
+        binding.champiOnes.isChecked = false
+        binding.atun.isChecked = false
+        binding.aceitunas.isChecked = false
+        binding.extra.isChecked = false
+        binding.pepino.isChecked = false
+        binding.piA.isChecked = false
+        binding.reparto.isChecked = false
+        binding.recogida.isChecked = false
+
+        binding.ticket.text = ""
+        selectedIngredients.clear()
+        toast?.cancel()
+    }
+
+
+
+
 
 
 
@@ -188,6 +200,8 @@ class MainActivity : AppCompatActivity() {
                  val intent = Intent(this, MainActivity3::class.java);
                  intent.putExtra("Ticket", ticketactivity2)
                  startActivity(intent)
+
+                 limpiar()
 
 
 
